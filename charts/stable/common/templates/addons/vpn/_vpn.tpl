@@ -16,6 +16,10 @@ It will include / inject the required templates based on the given values.
     {{- include "common.addon.gluetun" . }}
   {{- end -}}
 
+  {{- if eq "tailscale" .Values.addons.vpn.type -}}
+    {{- include "common.addon.tailscale" . }}
+  {{- end -}}
+
   {{/* Include the configmap if not empty */}}
   {{- $configmap := include "common.addon.vpn.configmap" . -}}
   {{- if $configmap -}}

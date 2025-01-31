@@ -484,7 +484,17 @@ addons:
     enabled: false
 
     # -- Specify the VPN type. Valid options are `openvpn`, `wireguard` and `gluetun`.
-    type: openvpn
+    type: tailscale
+
+    tailscale:
+      image:
+        # -- Specify the tailscale client image
+        repository: "ghcr.io/tailscale/tailscale"
+        # -- Specify the tailscale client image tag
+        tag: "latest"
+        # -- Specify the openvpn client image pull policy
+        pullPolicy: Always
+      userspace: true
 
     # -- OpenVPN specific configuration
     # @default -- See below
