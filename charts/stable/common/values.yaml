@@ -486,6 +486,8 @@ addons:
     # -- Specify the VPN type. Valid options are `openvpn`, `wireguard` and `gluetun`.
     type: tailscale
 
+    # -- Tailscale specific configuration
+    # @default -- See below
     tailscale:
       image:
         # -- Specify the tailscale client image

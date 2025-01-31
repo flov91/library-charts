@@ -7,7 +7,8 @@ kubeVersion: ">=1.16.0-0"
 keywords:
   - k8s-at-home
   - common
-home: https://github.com/k8s-at-home/library-charts/tree/main/stable/common
+# home: https://github.com/k8s-at-home/library-charts/tree/main/stable/common
+home: https://github.com/flov91/library-charts/tree/main/charts/stable/common
 maintainers:
   - name: flov91
     email: flov91@gmail.com
