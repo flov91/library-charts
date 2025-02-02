@@ -42,6 +42,13 @@ env:
 securityContext:
 {{- if and (hasKey .Values.addons.vpn.tailscale "userspace") (not .Values.addons.vpn.tailscale.userspace) }}
   privileged: true
+  capabilities:
+    add:
+      - NET_ADMIN
+      - NET_RAW
+  fsGroup: 0
+  runAsGroup: 0
+  runAsUser: 0
 {{- else }}
   privileged: false
 {{- end }}
